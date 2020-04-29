@@ -2,6 +2,7 @@ import SwiftUI
 import Combine
 import WebKit
 
+@available(iOS 13.0, *)
 public class WebViewStore: ObservableObject {
   @Published public var webView: WKWebView {
     didSet {
@@ -47,6 +48,7 @@ public class WebViewStore: ObservableObject {
 }
 
 /// A container for using a WKWebView in SwiftUI
+@available(iOS 13.0, *)
 public struct WebView: View, UIViewRepresentable {
   /// The WKWebView to display
   public let webView: WKWebView
@@ -70,6 +72,7 @@ public struct WebView: View, UIViewRepresentable {
 }
 
 /// A UIView which simply adds some view to its view hierarchy
+@available(iOS 13.0, *)
 public class UIViewContainerView<ContentView: UIView>: UIView {
   var contentView: ContentView? {
     willSet {
